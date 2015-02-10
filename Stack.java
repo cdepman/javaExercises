@@ -6,9 +6,6 @@ class Stack{
   public int pop(){
     int temp = storage[count-1];
     count = count - 1;
-    for (int i = 0; i < storage.length-1; i = i + 1){
-      storage[i] = storage[i+1];
-    }
     return temp;
   }
 

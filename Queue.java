@@ -26,11 +26,19 @@ class Queue{
     myQueue.push(1);
     myQueue.push(3);
     myQueue.push(5);
-    System.out.println(myQueue.length());
-    System.out.println(myQueue.pop());
-    System.out.println(myQueue.length());
+    System.out.println("Len: " + myQueue.length());
+    System.out.println("Pop: " + myQueue.pop());
+    System.out.println("Len: " + myQueue.length());
     myQueue.push(88);
-    System.out.println(myQueue.length());
+    System.out.println("Len: " + myQueue.length());
     myQueue.push(99);
+    System.out.println("Pop: " + myQueue.pop());
+    System.out.println("Pop: " + myQueue.pop());
+    System.out.println("Pop: " + myQueue.pop());
+    System.out.println("Len: " + myQueue.length());
+    System.out.println("Pop: " + myQueue.pop());
+    System.out.println("Len: " + myQueue.length());
+    System.out.println("Pop: " + myQueue.pop());
+
   }
 }
