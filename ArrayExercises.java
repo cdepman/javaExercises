@@ -20,7 +20,7 @@ public class ArrayExercises{
       if (nextItem.equals("Mars")){
         iter.remove();
       } else {
-        System.out.println(nextItem);
+        System.out. println(nextItem);
       }
     }
 
