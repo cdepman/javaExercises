@@ -17,6 +17,12 @@ class RockPaperScissors{
 
   public static void main(String[] args){
     int rounds = 3;
+
+    System.out.println(args[0]);
+
+    if (args[0] != null){
+      rounds = Integer.parseInt(args[0]);
+    }
     ArrayList<ArrayList<String>> results = new ArrayList<ArrayList<String>>();
     ArrayList<String> starter = new ArrayList<String>();
     String[] plays = {"Rock", "Paper", "Scissors"};
