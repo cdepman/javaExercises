@@ -22,5 +22,12 @@ class ArrayListDemo {
 
     int newSize = myStringArray.size();
     System.out.println(newSize);
+
+    
+    ArrayList<String> copyOfArray = new ArrayList<String>();
+    copyOfArray.addAll(myStringArray);
+    System.out.println(copyOfArray.contains("Wonderland"));
+
   }
+
 }
