@@ -12,6 +12,15 @@ class ArrayListDemo {
 
     for (String place: myStringArray){
       System.out.println(place);
+      if (place == "Hogwarts"){
+        System.out.println("Found Hogwarts");
+      }
     }
+
+    
+    myStringArray.remove("Hogwarts");
+
+    int newSize = myStringArray.size();
+    System.out.println(newSize);
   }
 }
