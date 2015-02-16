@@ -1,22 +1,27 @@
+import java.util.ArrayList;
+
 class RockPaperScissors{
 
-  String[] plays = {"Rock", "Paper", "Scissors"};
-  String[][] result = String[27][];
-  int rounds = 3;
-
-  public RPSCombinations(String[] playedSoFar){
-    if (playedSoFar.length == rounds){
-      result[result.length] = playedSoFar;
+  public static void RPSCombinations(ArrayList<String> playedSoFar, int rounds, ArrayList<ArrayList<String>> results, String[] plays){
+    if (playedSoFar.size() == rounds){
+      results.add(playedSoFar);
     } else {
-      
-      RPSCombinations()
+      for (int i = 0; i < plays.length; i = i + 1){
+        ArrayList<String> playedSoFarCopy = new ArrayList<String>();
+        playedSoFarCopy.addAll(playedSoFar);
+        playedSoFarCopy.add(plays[i]);
+        RPSCombinations(playedSoFarCopy, rounds, results, plays);
+      }
     }
   }
 
-  public 
-
-
   public static void main(String[] args){
+    int rounds = 3;
+    ArrayList<ArrayList<String>> results = new ArrayList<ArrayList<String>>();
+    ArrayList<String> starter = new ArrayList<String>();
+    String[] plays = {"Rock", "Paper", "Scissors"};
 
+    RPSCombinations(starter, rounds, results, plays);
+    System.out.println(results);
   }
 }
