@@ -18,9 +18,7 @@ class RockPaperScissors{
   public static void main(String[] args){
     int rounds = 3;
 
-    System.out.println(args[0]);
-
-    if (args[0] != null){
+    if (args.length != 0){
       rounds = Integer.parseInt(args[0]);
     }
     ArrayList<ArrayList<String>> results = new ArrayList<ArrayList<String>>();
