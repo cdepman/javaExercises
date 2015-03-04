@@ -37,8 +37,11 @@ class SumArray{
 
     SumArray sumArray = new SumArray();
     int[] testArray = {1,2,3,-3,-6,7,8,-19};
+    int[] testArray2 = {3,0,-1,-4,6,-3,2,-3,9,1,-5};
     System.out.println(sumArray.sumArrayNaive(testArray));    
     System.out.println(sumArray.sumArrayFast(testArray));    
+    System.out.println(sumArray.sumArrayNaive(testArray2));    
+    System.out.println(sumArray.sumArrayFast(testArray2));    
 
   }
 
