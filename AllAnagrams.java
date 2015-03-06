@@ -23,7 +23,6 @@ class AllAnagrams {
     for (int j = index+1; j < targetString.length(); j++){
       cleanedString += targetString.charAt(j);
     }
-    System.out.println(cleanedString);
     return cleanedString;
   }
 
@@ -32,8 +31,13 @@ class AllAnagrams {
   }
 
   public static void main(String[] args) {
+    String input = "the";
+    if (args.length > 0){
+      input = args[0];
+    }
+
     AllAnagrams allAnagrams = new AllAnagrams();
-    allAnagrams.findAnagrams("", "the", "the");
+    allAnagrams.findAnagrams("", input, input);
     System.out.println(allAnagrams.getResult());
   }
 }
