@@ -3,14 +3,15 @@ import java.util.ArrayList;
 class AllAnagrams {
 
   private ArrayList<String> result = new ArrayList<String>();
+  private String inputString;
 
-  public void findAnagrams(String builderString, String remainingChars, String inputString){
-    if (builderString != null && builderString.length() == inputString.length()){
+  public void findAnagrams(String builderString, String remainingChars){
+    if (builderString.length() == inputString.length()){
       result.add(builderString);
       return;
     }
     for (int i = 0; i < remainingChars.length(); i++){
-      findAnagrams(builderString+remainingChars.charAt(i), removeChar(remainingChars, i), inputString);
+      findAnagrams(builderString+remainingChars.charAt(i), removeChar(remainingChars, i));
     }
   }
 
@@ -30,14 +31,25 @@ class AllAnagrams {
     return this.result;
   }
 
+  public void setInputString(String inputString){
+    this.inputString = inputString;
+  }
+  
+  public String getInputString(){
+    return this.inputString;
+  }
+
   public static void main(String[] args) {
-    String input = "the";
+    
+    AllAnagrams allAnagrams = new AllAnagrams();
+
+    allAnagrams.setInputString("the");
     if (args.length > 0){
-      input = args[0];
+      allAnagrams.setInputString(args[0]);
     }
 
-    AllAnagrams allAnagrams = new AllAnagrams();
-    allAnagrams.findAnagrams("", input, input);
+    input = allAnagrams.getInputString();
+    allAnagrams.findAnagrams("", input);
     System.out.println(allAnagrams.getResult());
   }
 }
